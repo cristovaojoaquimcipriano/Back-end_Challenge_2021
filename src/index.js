@@ -19,6 +19,7 @@ class App {
 
   middlewares() {
     this.express.use(express.json);
+    this.express.use(express.urlencoded({ extended: false }));
     this.express.use(morgan("dev"));
   }
 
@@ -31,6 +32,7 @@ class App {
     this.express.get("/", (req, res) => {
       res.json({ message: "REST Back-end Challenge 20201209 Running" });
     });
+    require("./routes/user")(this.express);
   }
 }
 
