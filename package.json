@@ -1,0 +1,23 @@
+{
+  "name": "Back-end_Challenge_2021",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/cristovaojoaquimcipriano/Back-end_Challenge_2021.git",
+  "author": "Cristóvão Joquim Cipriano <cristovaojoaquimcipriano@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "dev": "nodemon src/",
+    "start": "node src/"
+  },
+  "dependencies": {
+    "axios": "^0.21.1",
+    "express": "^4.17.1",
+    "mongoose": "^6.0.4",
+    "node-cron": "^3.0.0"
+  },
+  "devDependencies": {
+    "dotenv": "^10.0.0",
+    "morgan": "^1.10.0",
+    "nodemon": "^2.0.12"
+  }
+}
