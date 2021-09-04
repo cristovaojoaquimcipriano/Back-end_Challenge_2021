@@ -1,6 +1,6 @@
 const mongoose = require("mongoose");
 
-const db = () => {
+const database = () => {
   mongoose
     .connect(process.env.MONGODB_URI, {
       useNewUrlParser: true,
@@ -14,4 +14,4 @@ const db = () => {
     });
 };
 
-module.exports = db;
+module.exports = database;

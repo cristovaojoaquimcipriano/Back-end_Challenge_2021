@@ -1,7 +1,8 @@
 require("dotenv").config();
 const express = require("express");
 const morgan = require("morgan");
-const db = require("./config/database");
+const database = require("./config/database");
+const datasync = require("./config/cron");
 
 class App {
   constructor() {
@@ -9,7 +10,7 @@ class App {
 
     this.routes();
     this.middlewares();
-    this.database();
+    this.services();
 
     this.express.listen(process.env.PORT || 3333, () => {
       console.log("Server listening on port ", process.env.PORT || 3333);
@@ -21,8 +22,9 @@ class App {
     this.express.use(morgan("dev"));
   }
 
-  database() {
-    db();
+  services() {
+    database();
+    datasync();
   }
 
   routes() {
