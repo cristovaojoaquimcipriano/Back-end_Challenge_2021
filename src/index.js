@@ -1,6 +1,7 @@
 require("dotenv").config();
 const express = require("express");
 const morgan = require("morgan");
+const db = require("./config/database");
 
 class App {
   constructor() {
@@ -8,6 +9,7 @@ class App {
 
     this.routes();
     this.middlewares();
+    this.database();
 
     this.express.listen(process.env.PORT || 3333, () => {
       console.log("Server listening on port ", process.env.PORT || 3333);
@@ -17,6 +19,10 @@ class App {
   middlewares() {
     this.express.use(express.json);
     this.express.use(morgan("dev"));
+  }
+
+  database() {
+    db();
   }
 
   routes() {
