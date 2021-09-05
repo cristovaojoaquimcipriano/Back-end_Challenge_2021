@@ -7,17 +7,22 @@
   "license": "MIT",
   "scripts": {
     "dev": "nodemon src/",
-    "start": "node src/"
+    "start": "node src/",
+    "test": "jest --detectOpenHandles"
   },
   "dependencies": {
     "axios": "^0.21.1",
+    "cors": "^2.8.5",
     "express": "^4.17.1",
     "mongoose": "^6.0.4",
     "node-cron": "^3.0.0"
   },
   "devDependencies": {
+    "@types/jest": "^27.0.1",
     "dotenv": "^10.0.0",
+    "jest": "^27.1.0",
     "morgan": "^1.10.0",
-    "nodemon": "^2.0.12"
+    "nodemon": "^2.0.12",
+    "supertest": "^6.1.6"
   }
 }
