@@ -33,6 +33,7 @@ class App {
       res.json({ message: "REST Back-end Challenge 20201209 Running" });
     });
     require("./routes/user")(this.express);
+    require("./routes/auth")(this.express);
   }
 }
 

@@ -33,3 +33,8 @@ MONGODB_URI=mongodb://localhost:27017/back-end_Challenge_2021
 ```
 MONGODB_URI=mongodb://localhost:27017/back-end_Challenge_2021_test
 ```
+
+## test
+```
+npm run test
+```
